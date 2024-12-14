@@ -21,5 +21,11 @@ class Jar:
             raise ValueError(f"You cannot take more than {Jar.number_of_cookies_in_jar} cookies from the jar")
         Jar.number_of_cookies_in_jar -= n
 
+    def capacity(self):
+        return self.capacity
+
     def size(self):
         return Jar.number_of_cookies_in_jar
+    
+jar1 = Jar()
+print(jar1.capacity())
