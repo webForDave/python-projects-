@@ -12,7 +12,7 @@ class Jar:
         return '🍪' * Jar.number_of_cookies_in_jar 
     
     def deposit(self, n):
-        if n > self.capacity:
+        if n > self.__capacity:
             raise ValueError(f"The jar can not take more than {self.capacity} cookies")
         Jar.number_of_cookies_in_jar += n
 
@@ -26,4 +26,3 @@ class Jar:
 
     def size(self):
         return Jar.number_of_cookies_in_jar
-    
