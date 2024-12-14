@@ -20,3 +20,6 @@ class Jar:
         if n > Jar.number_of_cookies_in_jar:
             raise ValueError(f"You cannot take more than {Jar.number_of_cookies_in_jar} cookies from the jar")
         Jar.number_of_cookies_in_jar -= n
+
+    def size(cls):
+        return cls.number_of_cookies_in_jar
