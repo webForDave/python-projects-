@@ -4,7 +4,7 @@ class Jar:
     def __init__(self, capacity=12):
         if capacity <= 0:
             raise ValueError('Jar can not have a 0 or less than 1 capacity')
-        self.capacity = capacity 
+        self.__capacity = capacity 
 
     def __str__(self):
         if Jar.number_of_cookies_in_jar == 0:
@@ -22,10 +22,8 @@ class Jar:
         Jar.number_of_cookies_in_jar -= n
 
     def capacity(self):
-        return self.capacity
+        return self.__capacity
 
     def size(self):
         return Jar.number_of_cookies_in_jar
     
-jar1 = Jar()
-print(jar1.capacity())
