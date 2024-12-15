@@ -1,7 +1,7 @@
 import random
 
 def main():
-    ...
+    return get_otp()
 
 
 def get_length():
@@ -16,7 +16,13 @@ def get_length():
 
 
 def get_otp():
-    ...
+    OTP = []
+    OTP_length = get_length()
+    while OTP_length > len(OTP):
+        otp_value = random.randint(0, 9)
+        OTP.append(otp_value)
+    
+    return ''.join(map(str, OTP))
 
 
 if __name__ == '__main__':
